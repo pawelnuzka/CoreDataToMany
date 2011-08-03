@@ -20,9 +20,9 @@
 		5053860C13E9E7E8004BA202 /* E.m in Sources */ = {isa = PBXBuildFile; fileRef = 5053860B13E9E7E8004BA202 /* E.m */; };
 		5053861013E9EB4E004BA202 /* MainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5053860E13E9EB4E004BA202 /* MainTableViewController.m */; };
 		5053861113E9EB4E004BA202 /* MainTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5053860F13E9EB4E004BA202 /* MainTableViewController.xib */; };
-		5053862A13E9FEEA004BA202 /* B.m in Sources */ = {isa = PBXBuildFile; fileRef = 5053862913E9FEEA004BA202 /* B.m */; };
 		5053862D13E9FEEC004BA202 /* C.m in Sources */ = {isa = PBXBuildFile; fileRef = 5053862C13E9FEEB004BA202 /* C.m */; };
 		5053863013E9FEEF004BA202 /* A.m in Sources */ = {isa = PBXBuildFile; fileRef = 5053862F13E9FEEE004BA202 /* A.m */; };
+		5053863313EA0B39004BA202 /* B.m in Sources */ = {isa = PBXBuildFile; fileRef = 5053863213EA0B38004BA202 /* B.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,12 +46,12 @@
 		5053860D13E9EB4E004BA202 /* MainTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTableViewController.h; sourceTree = "<group>"; };
 		5053860E13E9EB4E004BA202 /* MainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTableViewController.m; sourceTree = "<group>"; };
 		5053860F13E9EB4E004BA202 /* MainTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainTableViewController.xib; sourceTree = "<group>"; };
-		5053862813E9FEEA004BA202 /* B.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = B.h; sourceTree = "<group>"; };
-		5053862913E9FEEA004BA202 /* B.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = B.m; sourceTree = "<group>"; };
 		5053862B13E9FEEB004BA202 /* C.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = C.h; sourceTree = "<group>"; };
 		5053862C13E9FEEB004BA202 /* C.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = C.m; sourceTree = "<group>"; };
 		5053862E13E9FEED004BA202 /* A.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = A.h; sourceTree = "<group>"; };
 		5053862F13E9FEEE004BA202 /* A.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = A.m; sourceTree = "<group>"; };
+		5053863113EA0B37004BA202 /* B.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = B.h; sourceTree = "<group>"; };
+		5053863213EA0B38004BA202 /* B.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = B.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,12 +124,12 @@
 		505385FD13E9E7C3004BA202 /* Database */ = {
 			isa = PBXGroup;
 			children = (
+				5053863113EA0B37004BA202 /* B.h */,
+				5053863213EA0B38004BA202 /* B.m */,
 				5053862E13E9FEED004BA202 /* A.h */,
 				5053862F13E9FEEE004BA202 /* A.m */,
 				5053862B13E9FEEB004BA202 /* C.h */,
 				5053862C13E9FEEB004BA202 /* C.m */,
-				5053862813E9FEEA004BA202 /* B.h */,
-				5053862913E9FEEA004BA202 /* B.m */,
 				5053860A13E9E7E8004BA202 /* E.h */,
 				5053860B13E9E7E8004BA202 /* E.m */,
 				5053860713E9E7E8004BA202 /* D.h */,
@@ -210,9 +210,9 @@
 				5053860913E9E7E8004BA202 /* D.m in Sources */,
 				5053860C13E9E7E8004BA202 /* E.m in Sources */,
 				5053861013E9EB4E004BA202 /* MainTableViewController.m in Sources */,
-				5053862A13E9FEEA004BA202 /* B.m in Sources */,
 				5053862D13E9FEEC004BA202 /* C.m in Sources */,
 				5053863013E9FEEF004BA202 /* A.m in Sources */,
+				5053863313EA0B39004BA202 /* B.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
