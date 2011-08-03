@@ -7,7 +7,7 @@
 //
 
 #import "DeletingObjectsFromCoreDataAppDelegate.h"
-
+#import "MainTableViewController.h"
 @implementation DeletingObjectsFromCoreDataAppDelegate
 
 
@@ -19,9 +19,54 @@
 
 @synthesize persistentStoreCoordinator=__persistentStoreCoordinator;
 
+- (void)playWithDatabase
+{
+    for (int i = 0; i < 2; i++)
+    {
+        A * a = [NSEntityDescription insertNewObjectForEntityForName:@"A" inManagedObjectContext:self.managedObjectContext];
+        a.name = [NSString stringWithFormat:@"A_%d", i];
+        for (int j = 0; j < 3; j++)
+        {
+            B *b = [NSEntityDescription insertNewObjectForEntityForName:@"B" inManagedObjectContext:self.managedObjectContext];
+            b.name = [NSString stringWithFormat:@"B_%d_a%d", j, i];
+            [a addBObject:b];
+            [b addAObject:a];
+            for (int k = 0; k < 3; k++)
+            {
+                C *c = [NSEntityDescription insertNewObjectForEntityForName:@"C" inManagedObjectContext:self.managedObjectContext];
+                c.name = [NSString stringWithFormat:@"C_%d_b_%d_a_%d", k, j, i];
+                [b addCObject:c];
+                [c addBObject:b];
+                [a addCObject:c];
+                for (int l = 0; l < 3; l++)
+                {
+                    D * d = [NSEntityDescription insertNewObjectForEntityForName:@"D" inManagedObjectContext:self.managedObjectContext];
+                    d.name = [NSString stringWithFormat:@"D_%d_c_%d_b_%d_a_%d", l, k, j, i];
+                    [c addDObject:d];
+                    for (int m = 0; m < 3; m++)
+                    {
+                        E * e = [NSEntityDescription insertNewObjectForEntityForName:@"E" inManagedObjectContext:self.managedObjectContext];
+                        e.name = [NSString stringWithFormat:@"E_%d_d_%d_c_%d_b_%d_a_%d", m, l, k, j, i];
+                        [d addEObject:e];
+                        [self saveContext];
+                    }
+                }
+            }
+            
+        }
+        [self saveContext];
+    }
+}
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [self playWithDatabase];
+    [self saveContext];
     // Override point for customization after application launch.
+    MainTableViewController *tableView = [[MainTableViewController alloc] initWithNibName:@"MainTableViewController" bundle:nil];
+    tableView.context = self.managedObjectContext;
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:tableView];
+    [self.window addSubview:navController.view];
+//    NSLog(@"tableView context %@", tableView.context);
     [self.window makeKeyAndVisible];
     return YES;
 }

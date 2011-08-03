@@ -16,6 +16,13 @@
 		505385F113E9E5F0004BA202 /* DeletingObjectsFromCoreDataAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 505385F013E9E5F0004BA202 /* DeletingObjectsFromCoreDataAppDelegate.m */; };
 		505385F413E9E5F0004BA202 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 505385F213E9E5F0004BA202 /* MainWindow.xib */; };
 		505385F713E9E5F0004BA202 /* DeletingObjectsFromCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 505385F513E9E5F0004BA202 /* DeletingObjectsFromCoreData.xcdatamodeld */; };
+		5053860913E9E7E8004BA202 /* D.m in Sources */ = {isa = PBXBuildFile; fileRef = 5053860813E9E7E8004BA202 /* D.m */; };
+		5053860C13E9E7E8004BA202 /* E.m in Sources */ = {isa = PBXBuildFile; fileRef = 5053860B13E9E7E8004BA202 /* E.m */; };
+		5053861013E9EB4E004BA202 /* MainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5053860E13E9EB4E004BA202 /* MainTableViewController.m */; };
+		5053861113E9EB4E004BA202 /* MainTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5053860F13E9EB4E004BA202 /* MainTableViewController.xib */; };
+		5053862A13E9FEEA004BA202 /* B.m in Sources */ = {isa = PBXBuildFile; fileRef = 5053862913E9FEEA004BA202 /* B.m */; };
+		5053862D13E9FEEC004BA202 /* C.m in Sources */ = {isa = PBXBuildFile; fileRef = 5053862C13E9FEEB004BA202 /* C.m */; };
+		5053863013E9FEEF004BA202 /* A.m in Sources */ = {isa = PBXBuildFile; fileRef = 5053862F13E9FEEE004BA202 /* A.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,14 +31,27 @@
 		505385E013E9E5F0004BA202 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		505385E213E9E5F0004BA202 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		505385E413E9E5F0004BA202 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		505385E813E9E5F0004BA202 /* DeletingObjectsFromCoreData-Info.plist */ = {isa = PBXFileReference; path = "DeletingObjectsFromCoreData-Info.plist"; sourceTree = "<group>"; };
+		505385E813E9E5F0004BA202 /* DeletingObjectsFromCoreData-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DeletingObjectsFromCoreData-Info.plist"; sourceTree = "<group>"; };
 		505385EA13E9E5F0004BA202 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		505385EC13E9E5F0004BA202 /* DeletingObjectsFromCoreData-Prefix.pch */ = {isa = PBXFileReference; path = "DeletingObjectsFromCoreData-Prefix.pch"; sourceTree = "<group>"; };
+		505385EC13E9E5F0004BA202 /* DeletingObjectsFromCoreData-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DeletingObjectsFromCoreData-Prefix.pch"; sourceTree = "<group>"; };
 		505385ED13E9E5F0004BA202 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		505385EF13E9E5F0004BA202 /* DeletingObjectsFromCoreDataAppDelegate.h */ = {isa = PBXFileReference; path = DeletingObjectsFromCoreDataAppDelegate.h; sourceTree = "<group>"; };
+		505385EF13E9E5F0004BA202 /* DeletingObjectsFromCoreDataAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeletingObjectsFromCoreDataAppDelegate.h; sourceTree = "<group>"; };
 		505385F013E9E5F0004BA202 /* DeletingObjectsFromCoreDataAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeletingObjectsFromCoreDataAppDelegate.m; sourceTree = "<group>"; };
 		505385F313E9E5F0004BA202 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
 		505385F613E9E5F0004BA202 /* DeletingObjectsFromCoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DeletingObjectsFromCoreData.xcdatamodel; sourceTree = "<group>"; };
+		5053860713E9E7E8004BA202 /* D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = D.h; sourceTree = "<group>"; };
+		5053860813E9E7E8004BA202 /* D.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = D.m; sourceTree = "<group>"; };
+		5053860A13E9E7E8004BA202 /* E.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = E.h; sourceTree = "<group>"; };
+		5053860B13E9E7E8004BA202 /* E.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = E.m; sourceTree = "<group>"; };
+		5053860D13E9EB4E004BA202 /* MainTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTableViewController.h; sourceTree = "<group>"; };
+		5053860E13E9EB4E004BA202 /* MainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTableViewController.m; sourceTree = "<group>"; };
+		5053860F13E9EB4E004BA202 /* MainTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainTableViewController.xib; sourceTree = "<group>"; };
+		5053862813E9FEEA004BA202 /* B.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = B.h; sourceTree = "<group>"; };
+		5053862913E9FEEA004BA202 /* B.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = B.m; sourceTree = "<group>"; };
+		5053862B13E9FEEB004BA202 /* C.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = C.h; sourceTree = "<group>"; };
+		5053862C13E9FEEB004BA202 /* C.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = C.m; sourceTree = "<group>"; };
+		5053862E13E9FEED004BA202 /* A.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = A.h; sourceTree = "<group>"; };
+		5053862F13E9FEEE004BA202 /* A.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = A.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +100,7 @@
 		505385E613E9E5F0004BA202 /* DeletingObjectsFromCoreData */ = {
 			isa = PBXGroup;
 			children = (
+				505385FD13E9E7C3004BA202 /* Database */,
 				505385EF13E9E5F0004BA202 /* DeletingObjectsFromCoreDataAppDelegate.h */,
 				505385F013E9E5F0004BA202 /* DeletingObjectsFromCoreDataAppDelegate.m */,
 				505385F213E9E5F0004BA202 /* MainWindow.xib */,
@@ -98,6 +119,26 @@
 				505385ED13E9E5F0004BA202 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		505385FD13E9E7C3004BA202 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				5053862E13E9FEED004BA202 /* A.h */,
+				5053862F13E9FEEE004BA202 /* A.m */,
+				5053862B13E9FEEB004BA202 /* C.h */,
+				5053862C13E9FEEB004BA202 /* C.m */,
+				5053862813E9FEEA004BA202 /* B.h */,
+				5053862913E9FEEA004BA202 /* B.m */,
+				5053860A13E9E7E8004BA202 /* E.h */,
+				5053860B13E9E7E8004BA202 /* E.m */,
+				5053860713E9E7E8004BA202 /* D.h */,
+				5053860813E9E7E8004BA202 /* D.m */,
+				5053860D13E9EB4E004BA202 /* MainTableViewController.h */,
+				5053860E13E9EB4E004BA202 /* MainTableViewController.m */,
+				5053860F13E9EB4E004BA202 /* MainTableViewController.xib */,
+			);
+			name = Database;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,6 +193,7 @@
 			files = (
 				505385EB13E9E5F0004BA202 /* InfoPlist.strings in Resources */,
 				505385F413E9E5F0004BA202 /* MainWindow.xib in Resources */,
+				5053861113E9EB4E004BA202 /* MainTableViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -165,6 +207,12 @@
 				505385EE13E9E5F0004BA202 /* main.m in Sources */,
 				505385F113E9E5F0004BA202 /* DeletingObjectsFromCoreDataAppDelegate.m in Sources */,
 				505385F713E9E5F0004BA202 /* DeletingObjectsFromCoreData.xcdatamodeld in Sources */,
+				5053860913E9E7E8004BA202 /* D.m in Sources */,
+				5053860C13E9E7E8004BA202 /* E.m in Sources */,
+				5053861013E9EB4E004BA202 /* MainTableViewController.m in Sources */,
+				5053862A13E9FEEA004BA202 /* B.m in Sources */,
+				5053862D13E9FEEC004BA202 /* C.m in Sources */,
+				5053863013E9FEEF004BA202 /* A.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
