@@ -34,20 +34,15 @@
 }
 - (void)loadData
 {
-    NSLog(@"load data poczatek funkcji");
     if (!viewNumber)
         viewNumber = [NSNumber numberWithInt:1];
     int number = [viewNumber intValue];
-    NSLog(@"load data w trakcie funkcji %d", number);
     switch (number) {
         case 1:
             [self setTitle:@"A"];
             data = [self fetchManagedObjectsForEntity:@"A" withPredicate:nil];
             break;
         case 2:
-            NSLog(@"jestem w loadData 3 %@", currentEntity);
-            NSLog(@"c %@", [[[self currentEntity] c] allObjects]);
-            NSLog(@"b %@ ", [[[self currentEntity] b] allObjects]);
             data = [NSMutableArray arrayWithArray:[[[self currentEntity] b] allObjects]];
             [data addObjectsFromArray:[[[self currentEntity] c] allObjects]];
             break;
@@ -78,6 +73,8 @@
 
 - (void)dealloc
 {
+    if (data)
+        [data release];
     [super dealloc];
 }
 
@@ -176,14 +173,10 @@
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         // Delete the row from the data source
-        NSLog(@"jestem w delete");
         [self.context deleteObject:[data objectAtIndex:indexPath.row]];
         [self.context save:nil];
-        NSLog(@"usunalem, wczytuje dane");
         [self loadData];
-        NSLog(@"wczytalem dane");
         [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
-        NSLog(@"delete sie udal");
     }   
     else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
@@ -219,9 +212,13 @@
     MainTableViewController *detailViewController = [[MainTableViewController alloc] initWithNibName:@"MainTableViewController" bundle:nil];
     // ...
     // Pass the selected object to the new view controller.
+    BOOL s = NO;
     NSManagedObject *entity = [self.data objectAtIndex:indexPath.row];
     if ([entity isKindOfClass:[A class]] && [viewNumber intValue] != 1)
-         detailViewController.viewNumber = [NSNumber numberWithInt:2];
+    {
+        detailViewController.viewNumber = [NSNumber numberWithInt:2];
+        s = YES;
+    }
     else if ([entity isKindOfClass:[C class]] || [entity isKindOfClass:[B class]])
         detailViewController.viewNumber = [NSNumber numberWithInt:3]; 
     else if ([entity isKindOfClass:[D class]])
@@ -232,10 +229,27 @@
         detailViewController.viewNumber = [NSNumber numberWithInt:[viewNumber intValue] +1];
 
     detailViewController.context = self.context;
-        detailViewController.currentEntity = entity;
+    detailViewController.currentEntity = entity;
+//    if (s)
+//    {
+//        [self.navigationController setDelegate:self];
+//        [[[self.navigationController viewControllers] objectAtIndex:0] setCurrentEntity:entity];
+//        [self.navigationController popToRootViewControllerAnimated:NO];
+//    }
     [self.navigationController pushViewController:detailViewController animated:YES];
     [detailViewController release];
      
 }
-
+- (void)navigationController:(UINavigationController *)navigationController didShowViewController:(UIViewController *)viewController animated:(BOOL)animated
+{
+    if (!animated && self.currentEntity != nil)
+    {
+        MainTableViewController *detailViewController = [[MainTableViewController alloc] initWithNibName:@"MainTableViewController" bundle:nil];
+        detailViewController.viewNumber = [NSNumber numberWithInt:2];
+        detailViewController.context = self.context;
+        detailViewController.currentEntity = self.currentEntity;
+        [navigationController pushViewController:detailViewController animated:YES];
+        [detailViewController release];
+    }
+}
 @end
